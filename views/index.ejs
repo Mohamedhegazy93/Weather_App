@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../server.js"></script>
+    <style>
+        .container{
+            text-align: center;
+            align-items: center;
+            padding: 10px;
+        }
+        input{
+            padding: 10px 20px;
+            
+        }
+        
+        button{
+            background-color: rgb(0, 128, 255);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            transition: .3s;
+
+
+        }
+        button:hover{
+            background-color: transparent;
+            border: 1px solid #00a6ff;
+            color: black;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>weather in your city</h1>
+
+        <div>
+            <form action="/weather" method="get">
+                 <input id="labelCity"  type="text" id="city" name="city" placeholder="enter city name">
+            <button id="getWeatherBtn" onclick="cityValidate()">Get Weather</button>
+            </form>
+
+
+            
+           
+        </div>
+
+    </div>
+
+    <div class="">
+        <h1></h1>
+
+    </div>
+
+   
+    
+
+    <script>
+    
+        function cityValidate(){
+            let getWeatherBtn =document.getElementById("getWeatherBtn")
+            let labelCity=document.getElementById('labelCity')
+            if(labelCity.value==""){
+                alert('Please enter city name')
+            }
+
+        
+        }
+
+
+    </script>
+    
+</body>
+</html>
